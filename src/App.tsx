@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useState } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import { AuthContextProvider } from './Contexts/AuthContextProvider';
+
+import { Home } from './Pages/Home';
+import Background from './assets/background.jpeg';
+
+import './global.scss';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container-app'>
+        <img className='image-background' src={Background} />
+        <BrowserRouter>
+            <AuthContextProvider>
+                <Route exact path='/' component={Home}/>
+            </AuthContextProvider>
+        </BrowserRouter>
     </div>
   );
 }

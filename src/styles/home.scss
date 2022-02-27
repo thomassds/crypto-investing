@@ -1,0 +1,35 @@
+.container-home {
+    width: 100%;
+    height: 100%;
+}
+
+.section-game-home {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-game-home {
+    margin-top: 30px;
+    width: 950px;
+    height: 520px;
+
+    border: 2px solid;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    background-color: #0ECC32;
+}
+
+.list-investiments-game-home {
+    width: 550px;
+    height: 100%;
+}
